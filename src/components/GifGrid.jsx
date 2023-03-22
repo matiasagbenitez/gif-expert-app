@@ -6,20 +6,25 @@ export const GifGrid = ({ category }) => {
 
   return (
     <>
-      <div className="card-grid-header">
-        <h3>{category}</h3>
-      </div>
-      <hr />
+      <div className="bg-gray-400 pb-5 px-10 last-of-type:rounded-b-lg">
 
-      {isLoading && <p>Loading...</p>}
+        <h2>
+          Estos son los resultados de la búsqueda:{" "}
+          <span className="font-semibold">{category}</span>
+        </h2>
 
-      <div className="card-grid">
-        {images.map((image) => (
-          <GifItem
-            key={image.id}
-            {...image} // Recibe todas las propiedades de image como props
-          />
-        ))}
+        {isLoading && <p>Loading...</p>}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 my-5">
+          {images.map((image) => (
+            <GifItem
+              key={image.id}
+              {...image} // Recibe todas las propiedades de image como props
+            />
+          ))}
+        </div>
+
+
       </div>
     </>
   );

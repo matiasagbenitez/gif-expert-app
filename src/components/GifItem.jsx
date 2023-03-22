@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 
 export const GifItem = ({ title, url }) => {
   return (
-    <div className="card">
+    <div className="rounded-lg overflow-hidden bg-gray-200 flex flex-col justify-between">
       <img src={url} alt={title} />
-      <p>{title}</p>
+      <p className="p-2 text-xs italic">{title}</p>
     </div>
   );
 };

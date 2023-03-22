@@ -14,7 +14,8 @@ export const GifExpertApp = () => {
 
   return (
     <>
-      <h1>GifExpertApp</h1>
+      <h1 className="text-5xl text-center font-bold text-slate-400">GifExpertApp</h1>
+      <p className="italic text-center text-slate-400">Tu buscador de GIFs gratuito...</p>
 
       <AddCategory onNewCategory={(value) => onAddCategory(value)} />
 
