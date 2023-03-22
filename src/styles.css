@@ -1,64 +1,101 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(234, 234, 234);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 10px 50px;
+}
+
+input {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0px;
+}
+
+.card-grid {
+  /* Five columns */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  background-color: white;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  body {
-    padding: 60px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  input {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid rgb(97, 32, 158);
-    color: black;
-    font-size: 1.2rem;
-    outline: none;
-    padding: 10px 15px;
-    width: 100%;
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  h2 {
-    font-size: 1.5rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  h3 {
-    font-size: 3rem;
-    margin-bottom: 5px;
-  }
-  
-  .card-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    align-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    height: 0%;  
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    overflow: hidden;
-  }
-  
-  .card p {
-    background-color: white;
-    flex: 1;
-    font-size: 1.5rem;
-    margin-top: 5px;
-    padding: 5px 20px 0px 20px;
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
-  }
-  
+}
+
+.card-grid-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.buttonEliminar {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card p {
+  background-color: white;
+  font-size: .9rem;
+  font-weight: 700;
+  margin-top: 5px;
+  padding: 5px 20px 0px 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
