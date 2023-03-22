@@ -1,4 +1,5 @@
 import { GifItem } from "./GifItem";
+import { RemoveCategory } from "./RemoveCategory";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import PropTypes from "prop-types";
 
@@ -6,19 +7,16 @@ export const GifGrid = ({ category, onRemoveCategory }) => {
   const { images, isLoading } = useFetchGifs(category);
   return (
     <>
-      <div className="bg-gray-400 py-2 px-10 last-of-type:rounded-b-lg border border-black">
-        <div className="flex justify-between">
+      <div className="bg-gray-300 py-2 px-10 last-of-type:rounded-b-lg">
+        <div className="flex gap-2">
+          <RemoveCategory
+            onRemoveCategory={onRemoveCategory}
+            category={category}
+          />
           <h2>
-            Resultados de la búsqueda <span className="font-semibold">{category}</span>
+            Resultados de la búsqueda{" "}
+            <span className="font-semibold">{category}</span>
           </h2>
-
-          <button
-            onClick={() => onRemoveCategory(category)}
-            className="bg-red-600 hover:bg-red-800 text-white font-bold py-1 px-2 rounded-full text-xs"
-            title={`Eliminar ${category} de la lista`}
-          >
-            Eliminar categoría
-          </button>
         </div>
 
         {isLoading && <p>Loading...</p>}
