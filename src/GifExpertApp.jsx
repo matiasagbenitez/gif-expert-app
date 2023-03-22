@@ -50,7 +50,7 @@ export const GifExpertApp = () => {
         </div>
       ) : (
         <div className="bg-gray-300 rounded-b-lg pb-5">
-          <p className="text-center text-sm italic">
+          <p className="text-center text-sm italic" aria-label="no-results">
             No hay categorías. Agrega una para tener resultados.
           </p>
         </div>
