@@ -3,13 +3,15 @@
 exports[`Pruebas del componente <GifItem /> Debe hacer match con el snapshot 1`] = `
 <div>
   <div
-    class="card"
+    class="rounded-lg overflow-hidden bg-gray-200 flex flex-col justify-between"
   >
     <img
       alt="OnePunch"
       src="https://onepunch.com/"
     />
-    <p>
+    <p
+      class="p-2 text-xs italic"
+    >
       OnePunch
     </p>
   </div>
